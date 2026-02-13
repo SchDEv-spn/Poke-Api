@@ -198,3 +198,4 @@ document.addEventListener('keydown', (e) => {
 window.addEventListener('DOMContentLoaded', async () => {
     await goToPokemon(state.currentPokemonId);
 });
+
