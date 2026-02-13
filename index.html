@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKÉDEX - PokeAPI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="pokedex-card">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="title">POKÉDEX</h1>
+                <p class="subtitle">Explora el mundo Pokémon</p>
+            </div>
+
+            <!-- Pokemon Image Section -->
+            <div class="pokemon-image-section">
+                <img id="pokemonImage" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23f0f0f0' width='200' height='200'/%3E%3Ctext x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dominant-baseline='middle'%3ECargando...%3C/text%3E%3C/svg%3E" 
+                     alt="Pokémon" class="pokemon-image">
+            </div>
+
+            <!-- Status/Loading Area -->
+            <div id="statusArea" class="status-area hidden">
+                <span id="statusMessage" class="status-message"></span>
+            </div>
+
+            <!-- Pokemon Info Section -->
+            <div class="pokemon-info-section">
+                <div class="pokemon-name-container">
+                    <h2 id="pokemonName" class="pokemon-name">---</h2>
+                    <span id="pokemonId" class="pokemon-id">#000</span>
+                </div>
+
+                <div class="pokemon-types">
+                    <span id="type1" class="type-badge type-normal">Normal</span>
+                    <span id="type2" class="type-badge type-normal hidden">Normal</span>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="stats-section">
+                    <div class="stat-group">
+                        <label>HP</label>
+                        <div class="stat-bar">
+                            <div id="statHP" class="stat-fill"></div>
+                        </div>
+                        <span id="statHPValue">0</span>
+                    </div>
+                    <div class="stat-group">
+                        <label>ATK</label>
+                        <div class="stat-bar">
+                            <div id="statATK" class="stat-fill"></div>
+                        </div>
+                        <span id="statATKValue">0</span>
+                    </div>
+                    <div class="stat-group">
+                        <label>DEF</label>
+                        <div class="stat-bar">
+                            <div id="statDEF" class="stat-fill"></div>
+                        </div>
+                        <span id="statDEFValue">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls Section -->
+            <div class="controls-section">
+                <button id="btnPrevious" class="btn btn-primary" type="button">
+                    <span class="btn-icon">‹</span> Anterior
+                </button>
+                <button id="btnRandom" class="btn btn-secondary" type="button">
+                    🎲 Aleatorio
+                </button>
+                <button id="btnNext" class="btn btn-primary" type="button">
+                    Siguiente <span class="btn-icon">›</span>
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p id="footerInfo" class="footer-info">Presiona los botones o pulsa Enter para siguiente</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
